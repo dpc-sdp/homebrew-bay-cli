@@ -25,23 +25,3 @@ class Bay < Formula
       end
     end
   end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_arm64.tar.gz"
-      sha256 "81465c496348c4c760804b566da9b92263f52a4247e4f1d2f8e84e782c7c9f57"
-
-      ddef install
-        bin.install "bay"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_amd64.tar.gz"
-      sha256 "62fed7728187e4ea4ead56f9992dca3148e8966b5044205aedd7a764983fcfd4"
-
-      ddef install
-        bin.install "bay"
-      end
-    end
-  end
-end
