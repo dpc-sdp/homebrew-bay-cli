@@ -9,16 +9,16 @@ class Bay < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_darwin_arm64"
-      sha256 "1f4bd1227b3a5cce8898e084198ae36945e9fd4f338818835dba59f4616bb541"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_darwin_arm64.tar.gz"
+      sha256 "5adc6d466c0e33d60e446c750992e969822ec9deffd4d4f7f9d7a70accaf31ae"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_darwin_amd64"
-      sha256 "fe1731a68aa038e645ff90bd296e16aec5f1e6aa992b5acb38fbeb5b8b2dbd2f"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_darwin_amd64.tar.gz"
+      sha256 "a30f69f96b8b4138902b79e93399a8cb7eaecb0a246c42a1cd2b0e33f1498773"
 
       ddef install
         bin.install "bay"
@@ -28,16 +28,16 @@ class Bay < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_arm64"
-      sha256 "b9f98caf428c2dd6356148451ade683278fff6b541fbd282da99b3761dc17b9d"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_arm64.tar.gz"
+      sha256 "81465c496348c4c760804b566da9b92263f52a4247e4f1d2f8e84e782c7c9f57"
 
       ddef install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_amd64"
-      sha256 "4f0ef3276e464aa3b7f7045fc841908f6adfcaab0e3a54f0b1266657b2ee070d"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.2/bay_linux_amd64.tar.gz"
+      sha256 "62fed7728187e4ea4ead56f9992dca3148e8966b5044205aedd7a764983fcfd4"
 
       ddef install
         bin.install "bay"
