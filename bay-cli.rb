@@ -10,16 +10,16 @@ class BayCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Darwin_arm64.tar.gz"
-      sha256 "8ac8d2ec8072c27d0ce7f947ed021e217c9d147f436eb639c63bc29befe8c661"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.3-alpha2/homebrew-bay-cli_Darwin_arm64.tar.gz"
+      sha256 "4da8a9e3514870a4ef52423621fbdcef7214c8245396071fd2c5d7c14bc57a2a"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Darwin_x86_64.tar.gz"
-      sha256 "fe10445aa9023be30abd99e67fd1841a698709355ea1eae3d77f86e4bc26eac3"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.3-alpha2/homebrew-bay-cli_Darwin_x86_64.tar.gz"
+      sha256 "75ed2455a92dec2580ce21a6191e7b6c65960e9e3b6d7f7c9c7cb77e2c4a0d99"
 
       def install
         bin.install "bay"
@@ -29,16 +29,16 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Linux_arm64.tar.gz"
-      sha256 "a993ac4b72f4dae384722a231c41054ab5073392455fa344c2e2e00024171f71"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.3-alpha2/homebrew-bay-cli_Linux_arm64.tar.gz"
+      sha256 "0dfd0ffe9397b6fc130f4783409c5a8041858613ce6bb93a829314d613b898e3"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Linux_x86_64.tar.gz"
-      sha256 "f83e5b13cbcf61c57ab74af1598ca9429d9a8e88d98a351f1da6eae0b1730ca0"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.3-alpha2/homebrew-bay-cli_Linux_x86_64.tar.gz"
+      sha256 "1954964cc6395f8de4fa94a0d335c3de30d0cc2e58674fc34617fea47aa5d20c"
 
       def install
         bin.install "bay"
