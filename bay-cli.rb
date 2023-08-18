@@ -6,21 +6,21 @@ require_relative "custom_download_strategy"
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "0.0.3"
+  version "0.0.3-alpha2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.mycompany.com/foo/bar/releases/download/v0.0.3/bay-cli_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "572967c3d1496ef09a02983c2693cf73151ec8e9c1e803167802c71709d0c300"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "48aa7a46512f53e1419968d0b4dbe55296c4fa1520fe0d33edc0b63e280651ba"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.mycompany.com/foo/bar/releases/download/v0.0.3/bay-cli_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d59ddbff0ced5f3a6e61d4f6a8c3c62079094e2a9c963fff1f6c4e5c744cbd2f"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8e5a4533bbc5974bcb0c1dc54b0980ad61a57df25a03f5dd1b4080a691ad31a8"
 
       def install
         bin.install "bay"
@@ -30,16 +30,16 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.mycompany.com/foo/bar/releases/download/v0.0.3/bay-cli_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e07ee69a4022212ffb7bbb3b35fe1ce39bcec626575445b8131d899920b2d5b5"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "84a67ae82cdea16ff5f2b529fa6ebc82c831b1280ee92458c5ff7d09b0a3abb6"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.mycompany.com/foo/bar/releases/download/v0.0.3/bay-cli_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2822421d9a8c89a856b6ff4b1ba301514d9efedc7da55046668d591a1c8bd77c"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.3-alpha2/bay-cli_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ef273e3c030a7648f2a5db7718ab2b60bf005f1270a601616e6e553ee51614d9"
 
       def install
         bin.install "bay"
