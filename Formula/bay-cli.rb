@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "0.1.0"
+  version "0.0.4-alpha5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Darwin_x86_64.tar.gz"
-      sha256 "bc65d37c393e3df8e01385451267e2c31d200b6f3b4f011b6286c24a30fd518f"
+    if Hardware::CPU.arm?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.4-alpha5/bay-cli_Darwin_arm64.tar.gz"
+      sha256 "b24abae52767bd3d45582091a6932471350e135b52125d7900c29817bf00675e"
 
       def install
         bin.install "bay"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Darwin_arm64.tar.gz"
-      sha256 "b283b016e345c993069f4b50ab2b9a213469ab35f1e42dca19895ca31935c0d6"
+    if Hardware::CPU.intel?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.4-alpha5/bay-cli_Darwin_x86_64.tar.gz"
+      sha256 "e74b27c7c647e51d8e6227e24483c0e184b007ad77d39e2485c7382c4074bec4"
 
       def install
         bin.install "bay"
@@ -29,26 +29,20 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Linux_arm64.tar.gz"
-      sha256 "42f115e489d38ff35b22ec0462c19ec89b163fab187a1ef46622872e49da4caf"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.4-alpha5/bay-cli_Linux_arm64.tar.gz"
+      sha256 "dbfb7777ac108c4323d06503355b7ba708d7027c7ac7d411ddb53c2c7973cbda"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Linux_x86_64.tar.gz"
-      sha256 "ac4854954c04fa7ad548ce976b046136e09f1187d55c20768d27d91265ccca5f"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v0.0.4-alpha5/bay-cli_Linux_x86_64.tar.gz"
+      sha256 "e4715c5ef665c7035f9d6fea7edfbe31329021cb1bff53f6d9a7885c47baca66"
 
       def install
         bin.install "bay"
       end
     end
-  end
-
-  def caveats
-    <<~EOS
-      How to use this binary
-    EOS
   end
 end
