@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "0.0.4-alpha4"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.4-alpha4/homebrew-bay-cli_Darwin_arm64.tar.gz"
-      sha256 "414d7b98991640f867b57a2de5a772f2b4e857a23b91407a00a266e6810b4266"
+    if Hardware::CPU.intel?
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Darwin_x86_64.tar.gz"
+      sha256 "bc65d37c393e3df8e01385451267e2c31d200b6f3b4f011b6286c24a30fd518f"
 
       def install
         bin.install "bay"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.4-alpha4/homebrew-bay-cli_Darwin_x86_64.tar.gz"
-      sha256 "65a4cd1094c605b92f508a56d08fdde54ef4853d78672de0fade94b99ea49e05"
+    if Hardware::CPU.arm?
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Darwin_arm64.tar.gz"
+      sha256 "b283b016e345c993069f4b50ab2b9a213469ab35f1e42dca19895ca31935c0d6"
 
       def install
         bin.install "bay"
@@ -29,16 +29,16 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.4-alpha4/homebrew-bay-cli_Linux_arm64.tar.gz"
-      sha256 "22d9770fddb62824dbbf19e3b737a0b0dc5d0361c884ba32f3cc35e1b5323b9a"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Linux_arm64.tar.gz"
+      sha256 "42f115e489d38ff35b22ec0462c19ec89b163fab187a1ef46622872e49da4caf"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.0.4-alpha4/homebrew-bay-cli_Linux_x86_64.tar.gz"
-      sha256 "26f6af3ab52405002f5aa1cc85b5d45bf9d71a82259405c7df5f9179d1c97934"
+      url "https://github.com/dpc-sdp/homebrew-bay-cli/releases/download/v0.1.0/homebrew-bay-cli_Linux_x86_64.tar.gz"
+      sha256 "ac4854954c04fa7ad548ce976b046136e09f1187d55c20768d27d91265ccca5f"
 
       def install
         bin.install "bay"
