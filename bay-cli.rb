@@ -11,7 +11,7 @@ class BayCli < Formula
   on_macos do
     on_intel do
       url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.1.2/bay_darwin_amd64.tar.gz"
-      sha256 "58c9b80fd8362104c76af1b0e68549431ced59fdf9fb34456bbf725b3965b631"
+      sha256 "974e3c3ff535896c78c4f2f2ccebae942a1152e4e1b90d81c2be680e8f9f9127"
 
       def install
         bin.install "bay"
@@ -19,7 +19,7 @@ class BayCli < Formula
     end
     on_arm do
       url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.1.2/bay_darwin_arm64.tar.gz"
-      sha256 "b61e4a4ea9ae1972ba63a6af81252980ecbcb00b0e96a5733d59d03117732428"
+      sha256 "81ead0fba603e2fb2845ce681278ba935f0d5e369d8e8eef6dee8a3cbef4b597"
 
       def install
         bin.install "bay"
@@ -31,7 +31,7 @@ class BayCli < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.1.2/bay_linux_amd64.tar.gz"
-        sha256 "071eb34a130bbefac164b2f34adc897433c824b4f3da1fd8503ba02aa224cc7b"
+        sha256 "4c164df713bc5dc049a98582987b1df3ffa46e93c134bacc152c9e80205e39f0"
 
         def install
           bin.install "bay"
@@ -41,7 +41,7 @@ class BayCli < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.1.2/bay_linux_arm64.tar.gz"
-        sha256 "ab3a751f320a3c26312430c4dae5aad4000428465efcf37bd559245d04c8cdf7"
+        sha256 "d9287e47c9a180f651f7ba857934162e62b6de53553ab4f06b8cb4e00841f7d9"
 
         def install
           bin.install "bay"
