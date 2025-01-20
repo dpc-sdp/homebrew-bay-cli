@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.2.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.2.0/bay_darwin_amd64.tar.gz"
-      sha256 "c9e6afa2ee16e55c0df758b3770688f0036b82c17999cfbe02ea0c5034601043"
+    if Hardware::CPU.intel?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_darwin_amd64.tar.gz"
+      sha256 "1e41b7983a03c40257eb2fa67b15fc9e79ede11fb1f06a24ec7ab58d26a07432"
 
       def install
         bin.install "bay"
       end
     end
-    on_arm do
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.2.0/bay_darwin_arm64.tar.gz"
-      sha256 "55a85a3b64d586a47b062dc5ff66cca25fb4ee7531844920f663334a9ddb49f1"
+    if Hardware::CPU.arm?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_darwin_arm64.tar.gz"
+      sha256 "68e9853111b7b32703bd7cd41a8447dbe74bf86e18f3b184911f97fb72764e92"
 
       def install
         bin.install "bay"
@@ -28,20 +28,20 @@ class BayCli < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.2.0/bay_linux_amd64.tar.gz"
-        sha256 "99af126c7a1763fa0e0b0cfc79aa49c23768613d1110cee3e04aeb4e6bfc68ce"
+        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_linux_amd64.tar.gz"
+        sha256 "efc16bc674addfe3dc6082d5553ad0cccb245ed0f37588853064b40c05c72049"
 
         def install
           bin.install "bay"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.2.0/bay_linux_arm64.tar.gz"
-        sha256 "8177f1d00ddf534664711a699e63bd619d0493a31e1caf2b9ae4055ffa90cd4f"
+        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_linux_arm64.tar.gz"
+        sha256 "99d1d80d0db8a9a20cd124d6d5a405c911a65738562c23776dd82e81618a398b"
 
         def install
           bin.install "bay"
