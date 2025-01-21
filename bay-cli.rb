@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_darwin_amd64.tar.gz"
-      sha256 "1e41b7983a03c40257eb2fa67b15fc9e79ede11fb1f06a24ec7ab58d26a07432"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.2/bay_darwin_amd64.tar.gz"
+      sha256 "aed12435e0051155278fc934770ff9f7986e1a0b182be32e6eff8d79d4aee49e"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_darwin_arm64.tar.gz"
-      sha256 "68e9853111b7b32703bd7cd41a8447dbe74bf86e18f3b184911f97fb72764e92"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.2/bay_darwin_arm64.tar.gz"
+      sha256 "4994ce8c5edbdf636fc91f9954fa7fd79f91096cfcd2089bb36daae718458470"
 
       def install
         bin.install "bay"
@@ -30,8 +30,8 @@ class BayCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_linux_amd64.tar.gz"
-        sha256 "efc16bc674addfe3dc6082d5553ad0cccb245ed0f37588853064b40c05c72049"
+        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.2/bay_linux_amd64.tar.gz"
+        sha256 "3274cf2e668aeba12d92ba0083d6af6d3123edc15e8bdcc24d375282ef8545a9"
 
         def install
           bin.install "bay"
@@ -40,8 +40,8 @@ class BayCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.1/bay_linux_arm64.tar.gz"
-        sha256 "99d1d80d0db8a9a20cd124d6d5a405c911a65738562c23776dd82e81618a398b"
+        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.3.2/bay_linux_arm64.tar.gz"
+        sha256 "270aeb6f4a1cc9c8e83e49c91c4518a720d4edb2f2ed49922d14b101481f9a7a"
 
         def install
           bin.install "bay"
