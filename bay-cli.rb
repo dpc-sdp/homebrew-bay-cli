@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.4.3"
+  version "1.4.4"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.3/bay_darwin_amd64.tar.gz"
-      sha256 "ddda22a6bc7dfaf7d7dd1d43771d940b29c6ccba833f13b7912c9739b6e8ebdd"
+    if Hardware::CPU.intel?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_darwin_amd64.tar.gz"
+      sha256 "07f38b7cc520eead1d067e6776074d59112896725f74a0df5f348cd2e40d3d46"
 
       def install
         bin.install "bay"
       end
     end
-    on_arm do
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.3/bay_darwin_arm64.tar.gz"
-      sha256 "e4b3c3e3268179dcab0cc05e68e34b7dc0918b7980e362faac7efd74a9f718cf"
+    if Hardware::CPU.arm?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_darwin_arm64.tar.gz"
+      sha256 "141bb70f70ccfc6f3f591c5eca4e85645fcb417f512001989e3c8268b3d12867"
 
       def install
         bin.install "bay"
@@ -28,24 +28,18 @@ class BayCli < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.3/bay_linux_amd64.tar.gz"
-        sha256 "76b16386163e2c7f86c1903db355e24e5cedcec54c5d229b9c820babb7c40585"
-
-        def install
-          bin.install "bay"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_linux_amd64.tar.gz"
+      sha256 "ddd17e61abf14f6d5e2c0aa1a05ebf688ffd841ff7d0fe46b7b0e8dfab5ef290"
+      def install
+        bin.install "bay"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.3/bay_linux_arm64.tar.gz"
-        sha256 "eebc81ca4d7c528a603725b7d530e02c99aecbf146b2637ed1cf54664acdde05"
-
-        def install
-          bin.install "bay"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_linux_arm64.tar.gz"
+      sha256 "08bbb8a3c7f9b7e7d301924e539bb45e045608daf4e05dceae9d937d7db44846"
+      def install
+        bin.install "bay"
       end
     end
   end
