@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.4.4"
+  version "1.4.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_darwin_amd64.tar.gz"
-      sha256 "07f38b7cc520eead1d067e6776074d59112896725f74a0df5f348cd2e40d3d46"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_darwin_amd64.tar.gz"
+      sha256 "10245ee11817ac8987eb718afc2e66f9ec925ad78ffb8d8dfbcbef71a585b3cd"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_darwin_arm64.tar.gz"
-      sha256 "141bb70f70ccfc6f3f591c5eca4e85645fcb417f512001989e3c8268b3d12867"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_darwin_arm64.tar.gz"
+      sha256 "757ce709de654f15e120bbd382820705337879369930583dbe4ecf42be399239"
 
       def install
         bin.install "bay"
@@ -29,15 +29,15 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_linux_amd64.tar.gz"
-      sha256 "ddd17e61abf14f6d5e2c0aa1a05ebf688ffd841ff7d0fe46b7b0e8dfab5ef290"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_linux_amd64.tar.gz"
+      sha256 "afb429a8b35fbe5a56a39d7f35efbe2c189067afd4a16b51d16c0f810b743f8c"
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.4/bay_linux_arm64.tar.gz"
-      sha256 "08bbb8a3c7f9b7e7d301924e539bb45e045608daf4e05dceae9d937d7db44846"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_linux_arm64.tar.gz"
+      sha256 "0e25bd6e2ba080bcd8cfe89ecd122fbd65c2471a601eafc0793b9ec764de75b3"
       def install
         bin.install "bay"
       end
