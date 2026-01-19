@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.4.5"
+  version "1.4.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_darwin_amd64.tar.gz"
-      sha256 "10245ee11817ac8987eb718afc2e66f9ec925ad78ffb8d8dfbcbef71a585b3cd"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_darwin_amd64.tar.gz"
+      sha256 "f4d7d19c1bef50f80aa475d980a8910642cbc1c22f2658fd439e48090f079795"
 
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_darwin_arm64.tar.gz"
-      sha256 "757ce709de654f15e120bbd382820705337879369930583dbe4ecf42be399239"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_darwin_arm64.tar.gz"
+      sha256 "f31904bc786a3e816883cb56b03fc5d4b4b5a6f3b3b574991a8b2f123657f6b8"
 
       def install
         bin.install "bay"
@@ -29,15 +29,15 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_linux_amd64.tar.gz"
-      sha256 "afb429a8b35fbe5a56a39d7f35efbe2c189067afd4a16b51d16c0f810b743f8c"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_linux_amd64.tar.gz"
+      sha256 "4cfed52469f41773a4d1ceccdbc57171214167d92c4e8192f979761fecfeca2e"
       def install
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.5/bay_linux_arm64.tar.gz"
-      sha256 "0e25bd6e2ba080bcd8cfe89ecd122fbd65c2471a601eafc0793b9ec764de75b3"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_linux_arm64.tar.gz"
+      sha256 "02001daab2f7fa05e1616d6f89ea1632641c2eccc2ff966376799eea7fcf79fb"
       def install
         bin.install "bay"
       end
