@@ -5,23 +5,23 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.4.6"
+  version "1.4.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_darwin_amd64.tar.gz"
-      sha256 "f4d7d19c1bef50f80aa475d980a8910642cbc1c22f2658fd439e48090f079795"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.7/bay_darwin_amd64.tar.gz"
+      sha256 "4492e571c3bbb99a08efb060ccef79ed20fe716f36962623c1b9bd1d0ddbfd5a"
 
-      def install
+      define_method(:install) do
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_darwin_arm64.tar.gz"
-      sha256 "f31904bc786a3e816883cb56b03fc5d4b4b5a6f3b3b574991a8b2f123657f6b8"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.7/bay_darwin_arm64.tar.gz"
+      sha256 "1504ab1d5381161cd449d4fd6fd860da4927e9357acbaec173e1c126c4a94c2c"
 
-      def install
+      define_method(:install) do
         bin.install "bay"
       end
     end
@@ -29,16 +29,16 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_linux_amd64.tar.gz"
-      sha256 "4cfed52469f41773a4d1ceccdbc57171214167d92c4e8192f979761fecfeca2e"
-      def install
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.7/bay_linux_amd64.tar.gz"
+      sha256 "ff6264ea79f5672d63f4c6eb157a313c07a7338cbd96f993e88bec2ad0c6484e"
+      define_method(:install) do
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.6/bay_linux_arm64.tar.gz"
-      sha256 "02001daab2f7fa05e1616d6f89ea1632641c2eccc2ff966376799eea7fcf79fb"
-      def install
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.7/bay_linux_arm64.tar.gz"
+      sha256 "38014cd52a5c618ace68de51a2913780e095845ec5a5fd9fba69f55c54a73dc8"
+      define_method(:install) do
         bin.install "bay"
       end
     end
