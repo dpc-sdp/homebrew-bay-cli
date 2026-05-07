@@ -5,21 +5,21 @@
 class BayCli < Formula
   desc "CLI tool to interact with the Bay container platform"
   homepage "https://github.com/dpc-sdp/bay-cli"
-  version "1.4.8"
+  version "1.4.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.8/bay_darwin_amd64.tar.gz"
-      sha256 "5ccdbd3b3a08b64287eac8a82c88f798677642171cf4470f61b2a2e83c4395da"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.9/bay_darwin_amd64.tar.gz"
+      sha256 "dc73e72bc7b515bc702f8e074ef40560b7cc0974caf0b3cd3a15da92da84f40c"
 
       define_method(:install) do
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.8/bay_darwin_arm64.tar.gz"
-      sha256 "5eab6d8ef405f104ea4a1f3cb4ac9913527f53b5c43e014bece0a37581f34325"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.9/bay_darwin_arm64.tar.gz"
+      sha256 "5a9f443035a66bceeb9595ffa6acc9f9a63c0a3bdc6b1ffeec488520b04c2df3"
 
       define_method(:install) do
         bin.install "bay"
@@ -29,15 +29,15 @@ class BayCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.8/bay_linux_amd64.tar.gz"
-      sha256 "3b892572f6aa47856646e9f00845758d11316dfeb62e4da566e1299f6ae25c09"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.9/bay_linux_amd64.tar.gz"
+      sha256 "c7390c6f65332b2a98e92887864c8e30c67886ff5cfbc175e7d6d65dd4cc8e84"
       define_method(:install) do
         bin.install "bay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.8/bay_linux_arm64.tar.gz"
-      sha256 "a6cc5c692e05d829e6dec11997447b841bb3727db4ea10208906becfbfed1f1d"
+      url "https://github.com/dpc-sdp/bay-cli/releases/download/v1.4.9/bay_linux_arm64.tar.gz"
+      sha256 "fb07c98c10a75817607a284e41574706ee4ae0dc771cf04d198eb4ce9a17922d"
       define_method(:install) do
         bin.install "bay"
       end
